@@ -10,6 +10,17 @@ function eTNameFromXML(xmlString,pattern){
   }))]
 }
 
+/**
+ * 
+ * @param String xmlString : 중괄호가 포함된 문자 ex) (8)
+ * @returns 중괄호가 제거된 문자열 8
+ */
+function rmBrace(string){
+  return string.replace(/\(/,'')
+               .replace(/\)/,'');
+}
+
 export default {
-  eTNameFromXML
+  eTNameFromXML,
+  rmBrace
 };
